@@ -12,10 +12,10 @@ export class App extends Component {
   // };
   state = {
     contacts: [
-      { id: 'id-1', name: 'John Doe', number: '459-12-56' },
-      { id: 'id-2', name: 'Tyler Durden', number: '443-89-12' },
-      { id: 'id-3', name: 'Vincent Vega', number: '645-17-79' },
-      { id: 'id-4', name: 'Irene Adler', number: '227-91-26' },
+      { id: 'id-1', name: 'Henry Waterford', number: '666-66-66' },
+      { id: 'id-2', name: 'Claudia Schiffer', number: '420-69-00' },
+      { id: 'id-3', name: 'Vincent Van Gogh', number: '245-13-17' },
+      { id: 'id-4', name: 'William Turner', number: '888-33-16' },
     ],
     filter: '',
     name: '',
