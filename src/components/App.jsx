@@ -18,8 +18,6 @@ export class App extends Component {
       { id: 'id-4', name: 'William Turner', number: '888-33-16' },
     ],
     filter: '',
-    name: '',
-    number: '',
   };
 
   handleFilterChange = filterValue => {
