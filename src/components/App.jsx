@@ -14,19 +14,19 @@ const getFromLocalStorage = key => {
 };
 
 export class App extends Component {
-  // state = {
-  //   contacts: [],
-  //   filter: '',
-  // };
   state = {
-    contacts: [
-      { id: 'id-1', name: 'Henry Waterford', number: '666-66-66' },
-      { id: 'id-2', name: 'Claudia Schiffer', number: '420-69-00' },
-      { id: 'id-3', name: 'Vincent Van Gogh', number: '245-13-17' },
-      { id: 'id-4', name: 'William Turner', number: '888-33-16' },
-    ],
+    contacts: [],
     filter: '',
   };
+  // state = {
+  //   contacts: [
+  //     { id: 'id-1', name: 'Henry Waterford', number: '666-66-66' },
+  //     { id: 'id-2', name: 'Claudia Schiffer', number: '420-69-00' },
+  //     { id: 'id-3', name: 'Vincent Van Gogh', number: '245-13-17' },
+  //     { id: 'id-4', name: 'William Turner', number: '888-33-16' },
+  //   ],
+  //   filter: '',
+  // };
 
   componentDidMount() {
     const localData = getFromLocalStorage('contacts');
