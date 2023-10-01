@@ -5,6 +5,14 @@ import ContactList from './ContactList/ContactList';
 import { AppContainer } from './App.styles';
 import { nanoid } from 'nanoid';
 
+const saveToLocalStorage = (key, value) => {
+  localStorage.setItem(key, JSON.stringify(value));
+};
+
+const getFromLocalStorage = key => {
+  return JSON.parse(localStorage.getItem(key));
+};
+
 export class App extends Component {
   // state = {
   //   contacts: [],
@@ -19,6 +27,19 @@ export class App extends Component {
     ],
     filter: '',
   };
+
+  componentDidMount() {
+    const localData = getFromLocalStorage('contacts');
+    if (localData) {
+      this.setState({ contacts: localData });
+    }
+  }
+
+  componentDidUpdate(_, prevState) {
+    if (prevState.contacts !== this.state.contacts) {
+      saveToLocalStorage('contacts', this.state.contacts);
+    }
+  }
 
   handleFilterChange = filterValue => {
     this.setState({ filter: filterValue });
